@@ -1,0 +1,17 @@
+Give the factorial of the given number
+import java.util.Scanner;
+public class loop2{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int input1 = sc.nextInt();
+		int i;
+		int fact = 1;
+		for(i=1;i<=input1;i++)
+		{
+			fact = fact * i;
+		}
+		System.out.println(fact);
+		sc.close();
+	}
+}

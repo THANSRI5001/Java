@@ -1,0 +1,24 @@
+1. Code to display the greatest number.
+import java.util.Scanner;
+public class Greatestnumber{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int input1 = sc.nextInt();
+		int input2 = sc.nextInt();
+		int input3 = sc.nextInt();
+		if((input1 > input2) && (input1>input3))
+		{
+			System.out.println(input1);
+		}
+		else if((input2>input1) && (input2>input3))
+		{
+			System.out.println(input2);
+		}
+		else
+		{
+			System.out.println(input3);
+		}
+		sc.close();
+	}
+}
