@@ -1,0 +1,21 @@
+Display 
+input1 : 5
+output : 1 2 4 8 16
+
+import java.util.Scanner;
+public class loop2{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int input1 = sc.nextInt();
+		int i;
+		int answer = 1;
+		for(i=1;i<=input1;i++)
+		{
+			System.out.print(answer+" ");
+			answer = i*2;
+		}
+		
+		sc.close();
+	}
+}
