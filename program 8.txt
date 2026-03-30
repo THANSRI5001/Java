@@ -1,0 +1,28 @@
+To find average 
+
+import java.util.Scanner;
+public class Calculator
+{
+	double input1;
+	double input2;
+	double result;
+
+double findAverage()
+{
+	Scanner sc = new Scanner(System.in);
+	input1 = sc.nextDouble();
+	input2 = sc.nextDouble();
+	result = (input1+input2)/2;
+	return result;
+}
+
+public static void main(String[] args)
+{
+	Calculator calculation = new Calculator();
+	double avg = calculation.findAverage();
+	System.out.println(avg);
+	double round = Math.round(avg);
+	System.out.println(round);
+}
+}
+

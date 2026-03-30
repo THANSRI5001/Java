@@ -1,0 +1,59 @@
+----------------------------------------------------------------------------------------
+                           INPUT				OUTPUT
+----------------------------------------------------------------------------------------
+Food Type  -	Quantity Ordered   -	Distance	
+----------------------------------------------------------------------------------------
+   N	   -		2	   -	   3		-	   30
+----------------------------------------------------------------------------------------
+   V	   -		1	   -	   7		-	   17
+----------------------------------------------------------------------------------------
+For V each plate costs 12
+for N each plate costs 15
+
+Distance 
+for first 3km  -  0
+for next  3km  -  1
+remaining kms  -  2
+
+import java.util.Scanner;
+public class loop2{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter food type V or N:");
+		char FoodType = sc.next().charAt(0);
+		System.out.println("Enter the quantity :");
+		int FoodQuantity = sc.nextInt();
+		System.out.println("Enter distance:");
+		int Distance = sc.nextInt();
+		int result;
+		int type;
+		int DisAmount;
+		int mid;
+	
+		if(FoodType == 'N')
+		{
+			type = 15;
+		}
+		else
+		{
+			type = 12;
+		}
+		if((Distance>0) && (Distance<=3))
+		{
+			DisAmount = 0;
+		}
+		else if((Distance > 3) && (Distance <=6))
+		{
+			DisAmount = 1;
+		}
+		else
+		{
+			DisAmount = 2;
+		}
+		mid = FoodQuantity*type;
+		result = mid + DisAmount;
+		System.out.println(result);
+		sc.close();
+	}
+}

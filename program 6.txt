@@ -1,0 +1,39 @@
+input1 : 1 5 3
+output1 : 15
+
+input2 : 3 7 8
+output2 : 8
+
+input3 : 7 2 9
+output3 : 18
+
+input4 : 2 6 7
+output4 : -1
+
+import java.util.Scanner;
+public class loop2{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int input1 = sc.nextInt();
+		int input2 = sc.nextInt();
+		int input3 = sc.nextInt();
+		if((input1>input2) && (input1>input3))
+		{
+			System.out.println(input1*input2*input3);
+		}
+		else if((input2>input1) && (input2>input3))
+		{
+			System.out.println(input2*input3);
+		}
+		else if(input3 == 7)
+		{
+			System.out.println("-1");
+		}
+		else
+		{
+			System.out.println(input3);
+		}
+		sc.close();
+	}
+}

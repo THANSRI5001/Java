@@ -1,0 +1,57 @@
+Calculator program:
+
+import java.util.Scanner;
+public class Calculator
+{	
+	char operator;
+	int input1;
+	int input2;
+	double result;
+
+void display()
+{
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Enter any operator (+,-,*,/,%) :");
+	operator = sc.next().charAt(0);
+	System.out.println("Enter value 1:");
+	input1 = sc.nextInt();
+	System.out.println("Enter value 2:");
+	input2 = sc.nextInt();
+	if(operator == '+')
+	{
+		result = input1+input2;
+	}
+	else if(operator == '-')
+	{
+		result = input1-input2;
+	}
+	else if(operator == '*')
+	{
+		result = input1*input2;
+	}
+	else if(operator == '/')
+	{
+		if(input2==0)
+		{
+			System.out.println("Invalid");
+		}
+		else
+		{
+			result = input1/input2;
+		}
+	}
+	else if(operator == '%')
+	{
+		result = input1%input2;
+	}
+	System.out.println("Result: "+result);
+	sc.close();
+}
+
+public static void main(String[] args)
+{
+	Calculator cal = new Calculator();
+	cal.display();
+	
+}
+}
